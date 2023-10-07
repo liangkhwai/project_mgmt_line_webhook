@@ -4,17 +4,18 @@ const bodyParser = require("body-parser");
 const axios = require("axios");
 const cors = require("cors");
 const app = express();
-const port = 3001;
+const port = 1234;
 const qs = require("qs");
 app.use(bodyParser.json());
 
 const LINE_CHANNEL_LOGIN_ID = process.env.LINE_CHANNEL_LOGIN_ID;
 const LINE_CHANNEL_LOGIN_SECRET = process.env.LINE_CHANNEL_LOGIN_SECRET;
-const LINE_REDIRECT_URI = "https://34.126.100.66:3001/callback";
+const LINE_REDIRECT_URI =
+  "https://87ca-2403-6200-8837-846d-b5d0-5dd8-ad2a-ba57.ngrok-free.app/callback";
 
 app.use(
   cors({
-    origin: "*",
+    origin: "http://localhost:3000",
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
