@@ -33,6 +33,7 @@ app.get("/auth", (req, res) => {
 });
 
 app.get("/callback", async (req, res) => {
+  console.log('hi');
   const { code } = req.query;
   if (!code) {
     res.status(200).send("Authentication failed");
