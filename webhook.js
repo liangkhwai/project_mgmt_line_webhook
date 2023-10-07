@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const axios = require("axios");
 const cors = require("cors");
 const app = express();
-const port = 1234;
+const port = 3001;
 const qs = require("qs");
 app.use(bodyParser.json());
 
@@ -14,7 +14,7 @@ const LINE_REDIRECT_URI = "https://34.126.100.66:3001/callback";
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "*",
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
