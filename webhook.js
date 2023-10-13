@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 const LINE_CHANNEL_LOGIN_ID = process.env.LINE_CHANNEL_LOGIN_ID;
 const LINE_CHANNEL_LOGIN_SECRET = process.env.LINE_CHANNEL_LOGIN_SECRET;
 const LINE_REDIRECT_URI =
-  "https://87ca-2403-6200-8837-846d-b5d0-5dd8-ad2a-ba57.ngrok-free.app/callback";
+  "https://c9e2-2403-6200-8837-846d-2dc6-d914-5822-3eed.ngrok-free.app/callback";
 
 app.use(
   cors({
@@ -34,7 +34,7 @@ app.get("/auth", (req, res) => {
 });
 
 app.get("/callback", async (req, res) => {
-  console.log('hi');
+  console.log("hi");
   const { code } = req.query;
   if (!code) {
     res.status(200).send("Authentication failed");
